@@ -12,9 +12,9 @@
 List<String> convertToF(List<double> temperaturesInC) {
     List<String> temperaturesInF = [];
     for (var i = 0; i < temperaturesInC.length; i++) {
-        double el = (temperaturesInC[i] * 1.8 + 32);
-        String elString = el.toStringAsFixed(2);
-        temperaturesInF.add(elString);
+        double dumb = (temperaturesInC[i] * 1.8 + 32);
+        String notListDouble = dumb.toStringAsFixed(2);
+        temperaturesInF.add(notListDouble);
     }
     return temperaturesInF;
 }
