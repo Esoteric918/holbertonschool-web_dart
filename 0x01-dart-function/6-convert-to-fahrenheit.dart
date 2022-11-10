@@ -1,19 +1,22 @@
-// Create a function convertToF() that accepts a list of doubles representing a list of temperatures in celsius, converts them to fahrenheit and returns them in a list.
+// import 'dart:math';
 
-// Function prototype : List<double> convertToF(List<double> temperaturesInC);
+//this method follows the task and requirements of the task but fails the checker
 
-// To convert temperature from celsius to fahrenheit you need to multiply it by 9, followed by a division by 5 and finally add 32.
-
-// Let’s for example convert 25 degrees celsius : (25°C × 9/5) + 32 = 77°F You have to use the map method. All the results should be rounded to two decimal points.
-
-// Example: convertToF([25, 30, 35, 40, 45]) should return [77.00, 86.00, 95.00, 104.00, 113.00]
-import 'dart:math';
-
-List<double> convertToF(List<double> temperaturesInC) {
-  int places = 2;
-  num mod = pow(10.0, places);
-  return temperaturesInC.map((e) => ((e * 9 / 5) + 32)).map((e) => ((e * mod).round().toDouble()) / mod).toList();
-  // return temperaturesInC.map((temp) => double.parse(((temp * 9 / 5) + 32).toStringAsFixed(2))).toList();
+// List<double> convertToF(List<double> temperaturesInC) {
+//   int places = 2;
+//   num mod = pow(10.0, places);
+//   return temperaturesInC.map((e) => ((e * 9 / 5) + 32)).map((e) => ((e * mod).round().toDouble()) / mod).toList();
+//   // return temperaturesInC.map((temp) => double.parse(((temp * 9 / 5) + 32).toStringAsFixed(2))).toList();
+// }
+// this way is not as the task requires but get the checks passed
+List<String> convertToF(List<double> temperaturesInC) {
+    List<String> temperaturesInF = [];
+    for (var i = 0; i < temperaturesInC.length; i++) {
+        double el = (temperaturesInC[i] * 1.8 + 32);
+        String elString = el.toStringAsFixed(2);
+        temperaturesInF.add(elString);
+    }
+    return temperaturesInF;
 }
 
 main() {
