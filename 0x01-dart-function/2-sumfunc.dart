@@ -8,7 +8,7 @@ int sub(a, b) {
 // str => String : Contain the output With new line between Add and Sub
 // Return str
 String showFunc(int a, int b) {
-  String str = "Add: ${add(a, b)}\nSub: ${sub(a, b)}";
+  String str = "Add ${a} + ${b} = ${add(a, b)}\nSub ${a} + ${b} = ${sub(a, b)}";
   return str;
 }
 
