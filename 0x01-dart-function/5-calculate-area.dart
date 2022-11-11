@@ -1,6 +1,6 @@
 double calculateArea(double height, double base) {
   // the return shoud be rounded to two decimal places
-  return double.parse((height * base).toStringAsFixed(2));
+  return double.parse((.5 * height * base).toStringAsFixed(2));
 }
 
 
