@@ -1,9 +1,9 @@
 class User {
-  String? name;
-  showName() {
-    print('Hello ${name}');
-  }
+  String name = '';
 
+  String? showName() {
+    return 'Hello $name';
+  }
 }
 
 void main() {
