@@ -1,8 +1,8 @@
 import '9-palindrome.dart';
 
 String longestPalindrome(String s) {
-  if (s.length == 2) {
-   return 'none';
+  if (s.length < 3) {
+    return 'none';
   }
   // if (isPalindrome(s)) {
   //   return s;
@@ -16,7 +16,7 @@ String longestPalindrome(String s) {
       }
     }
   }
-  return longest;
+  return longest == '' ? 'none' : longest;
 }
 
 main() {
