@@ -23,7 +23,7 @@ String longestUniqueSubstring(String s) {
 // // use the compareTo() method to compare the characters
 //   for (var i = 0; i < s.length; i++) {
 //     if (current.compareTo(s[i]) < 0) {
-//       current += s[i];
+//       current += s[i] - 1;
 //     } else {
 //       if (current.length > longest.length) {
 //         longest = current;
@@ -38,5 +38,5 @@ main() {
   print(longestUniqueSubstring("abcacbd"));
   print(longestUniqueSubstring("aaaaaaaa"));
   print(longestUniqueSubstring("abcde"));
-  print(longestUniqueSubstring('banBan'));
+  print(longestUniqueSubstring('testmyballs'));
 }
