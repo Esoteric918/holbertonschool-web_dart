@@ -5,6 +5,7 @@
 //   var i = 0;
 //   var j = s.length - 1;
 //   while (i < j) {
+      // compare characters of the string
 //     if (s[i] != s[j]) {
 //       return false;
 //     }
@@ -19,6 +20,7 @@ bool isPalindrome(String s) {
     return false;
   }
   String? reversed = s.split('').reversed.join();
+  //compare the reversed string with the original string
   if (s == reversed) {
     return true;
   }
