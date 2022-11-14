@@ -17,7 +17,7 @@ class Password {
 }
 
 void main() {
-  final ps = Password(password: '');
+  final ps = Password();
   ps.password = "Just3z";
   if (ps.isValid() == true)
     print("${ps.password} is a Valid Password");
