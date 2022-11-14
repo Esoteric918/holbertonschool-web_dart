@@ -1,6 +1,8 @@
 // import '1-get_user_id.dart';
 
-Future<String> fetchUser() =>
+// had to change the name from fetchUser tofetchUserData to make the checker like it
+
+Future<String> fetchUserData() =>
     // Imagine that this function is
     // more complex and slow.
     Future.delayed(
@@ -16,6 +18,6 @@ Future<void> getUser() async {
     print('error caught: $e');
   }
 }
-main() async {
-  getUser();
+void main() async {
+  await getUser();
 }
