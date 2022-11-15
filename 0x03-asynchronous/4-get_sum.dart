@@ -28,10 +28,16 @@ Future<String> fetchProductPrice(product) async {
   }
 }
 
-Future<double> calculateTotal() {
-  var userdata = fetchUserData();
-
+Future<double> calculateTotal() async {
+  var user = jsonDecode(await fetchUserData());
+  var orders = jsonDecode(await fetchUserOrders(user['id']));
+  var total = 0.0;
+  for (var order in orders) {
+    total += jsonDecode(await fetchProductPrice(order));
+  }
+  return total;
 }
+
 
 
 main() async {
