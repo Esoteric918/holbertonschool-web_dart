@@ -6,9 +6,12 @@ Future<String> generateQuote(id) async {
   try {
     final response = await http
         .get(Uri.parse('https://breakingbadapi.com/api/quote/random'));
-    final quote = jsonDecode(response.body)[0]['quote'];
-    final author = jsonDecode(response.body)[0]['author'];
-    return "$author : $quote";
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      return data[0]['author'] + ' : ' + data[0]['quote'];
+    } else {
+      return 'Error: ${response.statusCode}';
+    }
   } catch (e) {
     return "There are no quotes";
   }
